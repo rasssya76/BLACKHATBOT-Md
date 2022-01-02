@@ -1,19 +1,15 @@
 let fs = require('fs')
-global.owner = ['62895369318181'] // Put your number here
-global.mods = ['62895369318181'] // Want some help?
+
+global.owner = ['6281351047727'] // Put your number here
+global.mods = [] // Want some help?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json'))
 global.APIs = { // API Prefix
   // name: 'https://website'
-  hardianto: 'https://hardianto-chan.herokuapp.com',
-  jonaz: 'https://jonaz-api-v2.herokuapp.com',
-  neoxr: 'https://neoxr-api.herokuapp.com',
   nrtm: 'https://nurutomo.herokuapp.com',
-  vhtear: 'https://api.vhtear.com',
-  lolhum: 'https://api.lolhuman.xyz',
-  fxc7: 'https://fxc7-api.herokuapp.com',
-  bx: 'https://bx-hunter.herokuapp.com',
   bg: 'http://bochil.ddns.net',
   xteam: 'https://api.xteam.xyz',
+  melcanz: 'httpa://melcanz.com',
+  lol: 'https://api.lolhuman.xyz',
   zahir: 'https://zahirr-web.herokuapp.com',
   zeks: 'https://api.zeks.xyz',
   pencarikode: 'https://pencarikode.xyz',
@@ -21,7 +17,9 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
-  'https://api.xteam.xyz': 'da5fb2b73ae3e451',
+  'https://api.xteam.xyz': 'apivproject',
+  'https://melcanz.com': 'elaina',
+  'https://api.lolhuman.xyz': 'pkebgk8248jskrkfm',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.xyz': 'apivinz',
   'https://pencarikode.xyz': 'pais',
@@ -29,10 +27,11 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'B L A C K H A T B O T'
-global.author = 'Sih Bodoh Tersakiti'
+global.stiker_wait = 'Stiker sedang dibuat'
+global.packname = 'ShiraoriBOT Multi device'
+global.author = 'Ilman'
 
-global.wm = '© Made by AhmadChenDev'
+global.wm = '© ShiraoriBOT-Md Made by Ilman'
 global.media = 'https://telegra.ph/file/5d45a3d1e12726d98c5e4.jpg'
 
 global.wait = '_*tunggu sedang di proses...*_'
@@ -72,7 +71,7 @@ global.rpg = {
   }
 }
 
-let fs = require('fs')
+
 let chalk = require('chalk')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
