@@ -10,8 +10,7 @@ let duit = `*────── 「 DONATE 」 ──────*
 Hai 👋
 Kalian bisa mendukung saya agar bot ini tetap up to date dengan:
 ┌〔 Donasi • Emoney 〕
-├🏧 081351047727 (OVO/Dana/GoPay)
-├📍 https://saweria.co/ilmanhdyt
+├ Gak Perlu Bang >~<
 └────
 Berapapun donasi kalian akan sangat berarti 👍
 
@@ -29,20 +28,20 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/fil
            hydratedButtons: [{
              urlButton: {
                displayText: '🏧 Saweria',
-               url: 'https://saweria.co/ilmanhdyt'
+               url: 'https://saweria.co/'
              }
 
            },
                {
              callButton: {
                displayText: 'Telkomsel',
-               phoneNumber: '+62 813-5104-7727'
+               phoneNumber: '+62-8123-4567-8910'
              }
            },           
                {
              quickReplyButton: {
-               displayText: '🧒 Owner',
-               id: '.owner',
+               displayText: 'Kembali Ke Menu',
+               id: '.menu',
              }
 
            }]
