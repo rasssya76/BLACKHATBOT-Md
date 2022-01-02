@@ -3,57 +3,57 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': '*MENU UTAMA*',
-  'game': '*MENU GAME*',
-  'rpg': '*MENU RPG*',
-  'xp': '*MENU EXP*',
-  'group': '*MENU GROUP*',
-  'owner': '*MENU OWNER*',
-  'fun': '*MENU FUN*',
-  'sticker': '*MENU CONVERT*',
-  'maker': '*MENU MAKER*',
-  'github': '*MENU GITHUB*',
-  'internet': '*INTERNET*',
-  'kerang': '*MENU KERANG*',
-  'anime': '*MENU ANIME*',
-  'downloader': '*DOWNLOADER*',
-  'nsfw': '*MENU NSFW*',
-  'tools': '*MENU TOOLS*',
-  'advanced': '*ADVANCED*',
-  'privasi': '*MENU PRIVASI*',
-  'info': '*MENU INFO*',
+  'main': 'MENU UTAMA',
+  'game': 'MENU GAME',
+  'rpg': 'MENU RPG',
+  'xp': 'MENU EXP',
+  'premium': 'MENU PREMIUM',
+  'group': 'MENU GROUP',
+  'absen': 'MENU ABSEN',
+  'vote': 'MENU VOTE',
+  'owner': 'MENU OWNER',
+  'fun': 'MENU FUN',
+  'sticker': 'MENU CONVERT',
+  'maker': 'MENU MAKER',
+  'github': 'MENU GITHUB',
+  'internet': 'INTERNET',
+  'kerang': 'MENU KERANG',
+  'anime': 'MENU ANIME',
+  'downloader': 'DOWNLOADER',
+  'nsfw': 'MENU NSFW',
+  'tools': 'MENU TOOLS',
+  'advanced': 'ADVANCED',
+  'quotes': 'MENU QUOTES',
+  'info': 'MENU INFO',
 }
 const defaultMenu = {
   before: `
-╭───══✪ %me 
-│➥ Version: %version
-│➥ Library: Baileys-MD
-│➥ Runtime: %uptime
-│➥ Infomasi: %me Dalam Pengembangan 🔊
+╭────ꕥ %me ꕥ────
+│✾ Version: %version
+│✾ Library: Baileys-MD
+│✾ Mode: ${global.opts['self'] ? 'Self' : 'publik'}
+│✾ Runtime: %uptime
 ╰❑
-╭─❑ 「 *INFO USER* 」 ❑──
-│ ➥ Name: %name 😗
-│ ➥ Status: Teruslah Berbuat Baik Walaupun Tak Berguna 😉
-│ ➥ Limit: %limit 📝
-│ ➥ Money: %money 💰
-│ ➥ Exp: %totalexp ⭐
-│ ➥ Level: %level 💝
-│ ➥ Role: %role
+╭─❑ 「 INFO USER 」 ❑──
+│ ✾ Name: %name
+│ ✾ Status: ---
+│ ✾ Limit: %limit
+│ ✾ Money: %money
+│ ✾ Exp: %totalexp
+│ ✾ Level: %level
+│ ✾ Role: %role
 ╰❑
-╭─❑ 「 CAPTION 😏 」 ❑──
-│ Begitu sulitnya mencari teman yang tak lupa kita
-│ seberapapun km mencintainya
-│ Itulah yg dinamakan sahabat yang hebat!
-│ Dalam kepala kaum wanita ada kekurangan,
-│ Tetapi dalam hati mereka ada kelebihan
-│ Jika Binggung Silakan Click Peraturan BOT
+╭─❑ 「 INFORMASI 」 ❑──
+│ Bot ini masih tahap beta
+│ apabila ada bug/eror harap
+│ lapor ke owner
 ╰❑
 %readmore`.trimStart(),
   header: '╭─「 %category 」',
   body: '│ • %cmd %islimit %isPremium',
   footer: '╰────\n',
   after: `
-*THCABOT@^%version*
+*%npmname@^%version*
 ${'```%npmdesc```'}
 `,
 }
@@ -157,45 +157,45 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-     let message = await prepareWAMessageMedia({ video: fs.readFileSync('./media/5b70ce2819763b733f72204b7cd372ad.mp4')}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
-           videoMessage: message.videoMessage,
            hydratedContentText: text.trim(),
+           locationMessage: { 
+           jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
            hydratedFooterText: wm,
-           hydratedButtons: [{           	
+           hydratedButtons: [{
              urlButton: {
-               displayText: ' SOURCE CODE 🗿',
-               url: 'https://github.com/koleksibot'
+               displayText: '💠 Source Code',
+               url: 'https://github.com/ilmanhdyt/ShiraoriBOT-Md'
              }
 
            },
              {
              callButton: {
                displayText: 'Nomor Owner',
-               PhoneNumber: '62895-3693-18181'
+               PhoneNumber: '0813-5104-7727'
              }
 
            },
                {
              quickReplyButton: {
-               displayText: 'BOT INI DALAM PENGEMBANGAN 👍',
-               id: '.waifu',
+               displayText: '🧒 Owner',
+               id: '.owner',
              }
 
            },
                {
              quickReplyButton: {
-               displayText: '💲 DONASI BOT 💲',
+               displayText: '💲 Donasi',
                id: '.donasi',
              }
 
            },
            {
              quickReplyButton: {
-               displayText: '🔥 RULES AND FAQ 🔥',
-               id: '.help',
+               displayText: '📍 Credits',
+               id: '.tqto',
              }
            }]
          }
@@ -225,7 +225,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.exp = 5
+handler.exp = 3
 
 module.exports = handler
 

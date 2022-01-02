@@ -1,33 +1,47 @@
-/**
-* jangan ganti ya kakak kakak sekalian
-* ini cuma buat ninggalin credit gw doang :)
-**/
-
 const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = require('@adiwajshing/baileys-md')
 let fs = require('fs')
+let moment = require('moment-timezone')
 let handler = async (m) => {
-let esce = `
-Bot ini Menggunakan Script Dari
+    let who
+    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
+    else who = m.sender
+    let user = global.db.data.users[who]
+let premium = `
+*SHIRAORI BOT PRICE*
 
-https://github.com/ilmanhdyt/ShiraoriBOT-Md`
+◩ *FREE USER*
+└───────
+ └❎ Unlimited Limit
+ └❎ Premium User 
+ └❎ Add Bot to Group 
+  
+◩ *PREMIUM USER*
+└───────
+ └✅ Unlimited Limit 
+ └✅ Premium User 
+ └❎ Add Bot to Group 
+   └  ▹  *Rp. 5.000*
+     └ Expired 3 hari
+ └ Order | hub : owner
+`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
-           hydratedContentText: esce,
+           hydratedContentText: premium,
            locationMessage: { 
-           jpegThumbnail: fs.readFileSync('./media/esce.jpg') },           
+           jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') }, 
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '💠 Source Code',
-               url: 'https://github.com/ilmanhdyt/ShiraoriBOT-Md'
+               displayText: 'DONASI',
+               url: 'https://saweria.co/ilmanhdyt'
              }
 
            },
                {
              quickReplyButton: {
-               displayText: 'Ok Bang',
-               id: '.menu',
+               displayText: 'OWNER',
+               id: '.owner',
              }
 
            }]
@@ -41,10 +55,8 @@ https://github.com/ilmanhdyt/ShiraoriBOT-Md`
          { messageId: template.key.id }
      )
 }
-handler.help = ['sc', 'sourcecode']
-handler.tags = ['info']
-handler.command = /^(sc|sourcecode)$/i
+handler.help = ['price']
+handler.tags = ['premium']
+handler.command = /^(price)$/i
 
 module.exports = handler
-
-

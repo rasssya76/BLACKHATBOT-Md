@@ -36,7 +36,7 @@ https://github.com/amiruldev20
            hydratedButtons: [{
              urlButton: {
                displayText: '💠 Source Code',
-               url: 'https://github.com/koleksibot'
+               url: 'https://github.com/ilmanhdyt/ShiraoriBOT-Md'
              }
 
            },
