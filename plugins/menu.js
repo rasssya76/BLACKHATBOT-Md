@@ -45,8 +45,8 @@ const defaultMenu = {
 ╰❑
 ╭─❑ 「 INFORMASI 」 ❑──
 │ Bot ini masih tahap beta
-│ apabila ada bug/eror harap
-│ lapor ke owner
+│ apabila ada bug/error harap
+│ lapor ke owner kami
 ╰❑
 %readmore`.trimStart(),
   header: '╭─「 %category 」',
@@ -167,14 +167,14 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedButtons: [{
              urlButton: {
                displayText: '💠 Source Code',
-               url: 'https://github.com/ilmanhdyt/ShiraoriBOT-Md'
+               url: 'https://github.com/koleksibot/BLACKHATBOT-Md'
              }
 
            },
              {
              callButton: {
                displayText: 'Nomor Owner',
-               PhoneNumber: '0813-5104-7727'
+               PhoneNumber: '0895-3693-18181'
              }
 
            },
@@ -194,8 +194,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            },
            {
              quickReplyButton: {
-               displayText: '📍 Credits',
-               id: '.tqto',
+               displayText: '📍 Waifu',
+               id: '.waifu',
              }
            }]
          }
