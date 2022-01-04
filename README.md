@@ -28,7 +28,7 @@
 > 
 > • Kalo pake termux mungkin bakal lama respon nya, saya sarankan pake heroku
 > 
-> • Kalo mau nambah fitur buat file baru [disini](https://github.com/koleksibot/BLACKHATBOT-Md/tree/Multi-Device/plugins) *Contoh* menu.js
+> • Kalo mau nambah fitur buat file baru [disini](https://github.com/koleksibot/BLACKHATBOT-Md/tree/main/plugins) *Contoh* menu.js
 >
 > • Kalo Ampi Key nya Habis Ya Beli Lah Anjay....
 
