@@ -19,7 +19,7 @@
 ---
 
 # BLACKHAT BOT Whatsapp MD
-## Install Module [here](https://github.com/ilmanhdyt/node_modules)
+## Install Module [here](https://www.mediafire.com/file/trl8cy4ba1bcimn/node_modules-master.zip/file)
 ## Information
 > BLACKHATBOT @Whatsapp using a Baileys library-md.
 > Jika kamu menemukan semacam bug, harap untuk dimaklumi sementara
