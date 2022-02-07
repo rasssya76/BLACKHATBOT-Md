@@ -1,6 +1,6 @@
 let fs = require('fs')
 
-global.owner = ['6281351047727'] // Put your number here
+global.owner = ['6281515589573'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json'))
 global.APIs = { // API Prefix
@@ -17,9 +17,9 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
-  'https://api.xteam.xyz': 'apivproject',
+  'https://api.xteam.xyz': '2eb0a9155717ed32',
   'https://melcanz.com': 'elaina',
-  'https://api.lolhuman.xyz': 'pkebgk8248jskrkfm',
+  'https://api.lolhuman.xyz': '7548d3d204cc3890c03d9468',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.xyz': 'apivinz',
   'https://pencarikode.xyz': 'pais',
@@ -28,13 +28,13 @@ global.APIKeys = { // APIKey Here
 
 // Sticker WM
 global.stiker_wait = 'Stiker sedang dibuat'
-global.packname = 'ShiraoriBOT Multi device'
-global.author = 'Ilman'
+global.packname = ' R - B O T X M U L T I D E V I C E'
+global.author = '\nBy Its me Rama'
 
-global.wm = '© ShiraoriBOT-Md Made by Ilman'
+global.wm = '© R - B O T '
 global.media = 'https://telegra.ph/file/5d45a3d1e12726d98c5e4.jpg'
 
-global.wait = '_*tunggu sedang di proses...*_'
+global.wait = '              _*WAIT*_             '
 global.eror = '_*Server Error*_'
 
 global.multiplier = 69 // The higher, The harder levelup
