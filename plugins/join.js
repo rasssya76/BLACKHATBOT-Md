@@ -3,7 +3,7 @@ let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
 let handler = async (m, { conn, text, usedPrefix }) => {
     let [_, code] = text.match(linkRegex) || []
     if (!code) throw 'Link Salah'
-    let res = await conn.acceptInvite(code)
+    let res = await AcceptInvite(result).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
     m.reply(`Berhasil join grup ${res.gid}`).then(() => {
         var jumlahHari = 86400000 * 0.5
         var now = new Date() * 1
