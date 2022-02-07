@@ -1,4 +1,4 @@
-const { showhit } = require('../lib/hit')
+const { showhit } = require('./lib/hit')
 
 shp = '♡ۣۜۜ፝͜͜͡͡✿➤'
 
