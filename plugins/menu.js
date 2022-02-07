@@ -44,13 +44,13 @@ const defaultMenu = {
   Role: _%role_
 
  *INFORMASI* 
- *_Bot ini masih tahap beta
+ Bot ini masih tahap beta
  apabila ada bug/error harap
- lapor ke owner kami_*
+ lapor ke owner kami
 
 %readmore`.trimStart(),
   header: '┌─「 *%category* 」',
-  body: '│ ➳ *%cmd %islimit %isPremium*',
+  body: '│ ➳ *%cmd* %islimit %isPremium',
   footer: '└────\n',
   after: `
 *%npmname@^%version*
