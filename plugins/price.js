@@ -34,7 +34,7 @@ let premium = `
            hydratedButtons: [{
              urlButton: {
                displayText: 'DONASI',
-               url: 'https://saweria.co/ilmanhdyt'
+               url: 'https://saweria.co/'
              }
 
            },
