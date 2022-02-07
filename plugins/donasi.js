@@ -17,7 +17,7 @@ Berapapun donasi kalian akan sangat berarti 👍
 Arigatou!
 
 Contact person Owner:
-wa.me/6181351047727 (Owner)`
+wa.me/6281515589573 (Owner)`
 let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/file/ca517a39ce85c8a4c0479.jpg' }}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
@@ -35,7 +35,7 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/fil
                {
              callButton: {
                displayText: 'Telkomsel',
-               phoneNumber: '+62-8123-4567-8910'
+               phoneNumber: 'wa.me/6281515589573'
              }
            },           
                {

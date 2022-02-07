@@ -5,13 +5,13 @@ let handler = async (m) => {
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
     else who = m.sender
     let user = global.db.data.users[who]
-let anu = `╭───❑ 「 SEMUA MENU 」 ❑────
-│ ✇ Name: ${user.name}
-│ ✇ Limit: ${user.limit}
-│ ✇ Money: ${user.money}
-│ ✇ Exp: ${user.exp}
-│ ✇ Level: ${user.level}
-╰❑`
+let anu = ` 「 *SEMUA MENU* 」
+     Name: _${user.name}_
+     Limit: _${user.limit}_
+     Money: _${user.money}_
+     Exp: _${user.exp}_
+     Level: _${user.level}_
+ `
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
@@ -21,14 +21,14 @@ let anu = `╭───❑ 「 SEMUA MENU 」 ❑────
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '💠 Source Code 💠',
-               url: 'https://github.com/koleksibot'
+               displayText: 'Source Code',
+               url: 'https://github.com/'
              }
 
            },
                {
              quickReplyButton: {
-               displayText: '🔙 Back To Menu',
+               displayText: 'Back To Menu',
                id: '.menu',
              }
 

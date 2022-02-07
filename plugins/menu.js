@@ -3,55 +3,55 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': 'MENU UTAMA',
-  'game': 'MENU GAME',
-  'rpg': 'MENU RPG',
-  'xp': 'MENU EXP',
-  'premium': 'MENU PREMIUM',
-  'group': 'MENU GROUP',
-  'absen': 'MENU ABSEN',
-  'vote': 'MENU VOTE',
-  'owner': 'MENU OWNER',
-  'fun': 'MENU FUN',
-  'sticker': 'MENU CONVERT',
-  'maker': 'MENU MAKER',
-  'github': 'MENU GITHUB',
-  'internet': 'INTERNET',
-  'kerang': 'MENU KERANG',
-  'anime': 'MENU ANIME',
-  'downloader': 'DOWNLOADER',
-  'nsfw': 'MENU NSFW',
-  'tools': 'MENU TOOLS',
-  'advanced': 'ADVANCED',
-  'quotes': 'MENU QUOTES',
-  'info': 'MENU INFO',
+  'main': 'ᴍᴇɴᴜ ᴜᴛᴀᴍᴀ',
+  'game': 'ᴍᴇɴᴜ ɢᴀᴍᴇ',
+  'rpg': 'ᴍᴇɴᴜ ʀᴘɢ',
+  'xp': 'ᴍᴇɴᴜ ᴇxᴘ',
+  'premium': 'ᴍᴇɴᴜ ᴘʀᴇᴍɪᴜᴍ',
+  'group': 'ᴍᴇɴᴜ ɢʀᴏᴜᴘ',
+  'absen': 'ᴍᴇɴᴜ ᴀʙsᴇɴ',
+  'vote': 'ᴍᴇɴᴜ ᴠᴏᴛᴇ',
+  'owner': 'ᴍᴇɴᴜ ᴏᴡɴᴇʀ',
+  'fun': 'ᴍᴇɴᴜ ғᴜɴ',
+  'sticker': 'ᴍᴇɴᴜ ᴄᴏɴᴠᴇʀᴛ',
+  'maker': 'ᴍᴇɴᴜ ᴍᴀᴋᴇʀ',
+  'github': 'ᴍᴇɴᴜ ɢɪᴛʜᴜʙ',
+  'internet': 'ɪɴᴛᴇʀɴᴇᴛ',
+  'kerang': 'ᴍᴇɴᴜ ᴋᴇʀᴀɴɢ',
+  'anime': 'ᴍᴇɴᴜ ᴀɴɪᴍᴇ',
+  'downloader': 'ᴅᴏᴡɴʟᴏᴀᴅᴇʀ',
+  'nsfw': 'ᴍᴇɴᴜ ɴғsᴡ',
+  'tools': 'ᴍᴇɴᴜ ᴛᴏʟʟs',
+  'advanced': 'ᴀᴅᴠᴀɴᴄᴇ',
+  'quotes': 'ᴍᴇɴᴜ ǫᴜᴏᴛᴇs',
+  'info': 'ᴍᴇɴᴜ ɪɴғᴏ',
 }
 const defaultMenu = {
   before: `
-╭────ꕥ %me ꕥ────
-│✾ Version: %version
-│✾ Library: Baileys-MD
-│✾ Mode: ${global.opts['self'] ? 'Self' : 'publik'}
-│✾ Runtime: %uptime
-╰❑
-╭─❑ 「 INFO USER 」 ❑──
-│ ✾ Name: %name
-│ ✾ Status: ---
-│ ✾ Limit: %limit
-│ ✾ Money: %money
-│ ✾ Exp: %totalexp
-│ ✾ Level: %level
-│ ✾ Role: %role
-╰❑
-╭─❑ 「 INFORMASI 」 ❑──
-│ Bot ini masih tahap beta
-│ apabila ada bug/error harap
-│ lapor ke owner kami
-╰❑
+ *%me* 
+ Version: _%version_
+ Library: _Baileys-MD_
+ Mode: _${global.opts['self'] ? 'Self' : 'publik'}_
+ Runtime: _%uptime_
+
+  *INFO USER* 
+  Name: _%name_
+  Status: _---_
+  Limit: _%limit_
+  Money: _%money_
+  Exp: _%totalexp_
+  Level: _%level_
+  Role: _%role_
+
+ *INFORMASI* 
+ *_Bot ini masih tahap beta
+ apabila ada bug/error harap
+ lapor ke owner kami_*
+
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  header: '┌─「 *%category* 」',
+  body: '│ ➳ *%cmd %islimit %isPremium*',
+  footer: '└────\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -166,35 +166,35 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '💠 Source Code',
-               url: 'https://github.com/koleksibot/BLACKHATBOT-Md'
+               displayText: ' S O U C E C O D E ',
+               url: 'https://github.com/'
              }
 
            },
              {
              callButton: {
-               displayText: 'Nomor Owner',
-               PhoneNumber: '0895-3693-18181'
+               displayText: ' O W N E R ',
+               PhoneNumber: '081515589573'
              }
 
            },
                {
              quickReplyButton: {
-               displayText: '🧒 Owner',
+               displayText: 'CREATOR',
                id: '.owner',
              }
 
            },
                {
              quickReplyButton: {
-               displayText: '💲 Donasi',
+               displayText: 'DONATE',
                id: '.donasi',
              }
 
            },
            {
              quickReplyButton: {
-               displayText: '📍 Waifu',
+               displayText: 'WAIFU',
                id: '.waifu',
              }
            }]
